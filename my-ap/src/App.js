@@ -6,7 +6,7 @@ function App() {
 
     useEffect(() => {
         // Replace with your backend URL
-        axios.get('localhost:3001/api/items')
+        axios.get('127.0.0.1:3001/api/items')
             .then(response => {
                 setItems(response.name);
             })
