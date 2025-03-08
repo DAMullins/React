@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import QueryForm from './QueryForm';
 
 function App() {
     const [items, setItems] = useState([]);
     const [query, setQuery] = useState('SELECT * FROM test');
     useEffect(() => {
+
+
         // Replace with your backend URL
         axios.post('https://melanierealestate.com/api.php', {sql : query})
             .then(response => {
@@ -17,12 +20,7 @@ function App() {
 
     return (
         <div>
-            <h1>Items</h1>
-            <ul>
-                {items.map(item => (
-                    <li key={item.id}>{item.name}</li>
-                ))}
-            </ul>
+            <QueryForm />
         </div>
     );
 }
