@@ -6,7 +6,7 @@ function App() {
     const [query, setQuery] = useState('SELECT * FROM test');
     useEffect(() => {
         // Replace with your backend URL
-        axios.post('https://melanierealestate.com/api/items', {sql : query})
+        axios.post('https://melanierealestate.com/api.php', {sql : query})
             .then(response => {
                 setItems(response.name);
             })
