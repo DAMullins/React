@@ -12,7 +12,7 @@ const QueryForm = () => {
     setError(null); // Clear previous error
 
     try {
-      const response = await axios.post('https://yourdomain.com/api.php', {
+      const response = await axios.post('https://melanierealestate.com/api.php', {
         sql: query // The SQL query to send
       }, {
         headers: {
