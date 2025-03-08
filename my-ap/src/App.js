@@ -3,10 +3,10 @@ import axios from 'axios';
 
 function App() {
     const [items, setItems] = useState([]);
-
+    const [query, setQuery] = useState('SELECT * FROM test');
     useEffect(() => {
         // Replace with your backend URL
-        axios.get('127.0.0.1:3001/api/items')
+        axios.post('127.0.0.1:3001/api/items', {sql : query})
             .then(response => {
                 setItems(response.name);
             })
